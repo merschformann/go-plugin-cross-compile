@@ -5,12 +5,25 @@ import (
 	"io/ioutil"
 	"log"
 	"os"
+	"path/filepath"
 	"plugin"
+	"runtime"
 )
 
 func main() {
+	// Determine plugin to load (expect it in the binary's directory).
+	ex, err := os.Executable()
+	if err != nil {
+		panic(err)
+	}
+	exPath := filepath.Dir(ex)
+	pluginPath := "plugin-linux-arm64.so"
+	if runtime.GOARCH == "amd64" {
+		pluginPath = "plugin-linux-amd64.so"
+	}
+	pluginPath = filepath.Join(exPath, pluginPath)
+
 	// Load the plugin
-	pluginPath := "plugin.so"
 	p, err := plugin.Open(pluginPath)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "error loading plugin %q\n", pluginPath)
