@@ -1,6 +1,6 @@
 # go-plugin-cross-compile
 
-A minimal example for cross-compiling go plugin apps
+A minimal example for cross-compiling go plugin apps. This is a minimal example for the issue reported [here](https://github.com/golang/go/issues/54075).
 
 ## Prerequisites
 
