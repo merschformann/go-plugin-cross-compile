@@ -43,7 +43,7 @@ Steps to reproduce:
 4. It raises the following error:
 
     ```bash
-    [ec2-user@ip-172-31-62-156 testplugin]$ echo hello | ./main 
+    $ echo hello | ./main
     error loading plugin "/home/ec2-user/tmp/testplugin/plugin-linux-arm64.so"
     panic: plugin: not implemented
 
