@@ -44,9 +44,9 @@ Steps to reproduce:
 
     ```bash
     $ echo hello | ./main
-    error loading plugin "/home/ec2-user/tmp/testplugin/plugin-linux-arm64.so"
+    error loading plugin "/home/ec2-user/plugintest/plugin-linux-arm64.so"
     panic: plugin: not implemented
-
+    
     goroutine 1 [running]:
     main.main()
             ./main.go:30 +0x110
