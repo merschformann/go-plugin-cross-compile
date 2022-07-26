@@ -8,7 +8,7 @@ A minimal example for cross-compiling go plugin apps
 
 ## Compile the plugin
 
-> :bulb: This step is optional. Pre-compiled plugins for linux/arm64 & linux/amd64 target platforms are available in bin/ already.
+> :bulb: This step is optional. Pre-compiled plugins for _linux/arm64_ & _linux/amd64_ target platforms are available in bin/ already.
 
 Compile the plugin on the right platform and move it to the bin directory.
 
@@ -37,9 +37,9 @@ GOOS=linux GOARCH=arm64 go build -trimpath -o bin/main entry/main.go
 
 Steps to reproduce:
 
-1. Compile plugin on linux/arm64 (already located in bin/)
-2. Cross-compile binary on linux/amd64 (or any other non-linux/arm64) targeting linux/arm64
-3. Execute binary on linux/arm64
+1. Compile plugin on _linux/arm64_ (already located in bin/)
+2. Cross-compile binary on _linux/amd64_ (or any other non-_linux/arm64_) targeting _linux/arm64_
+3. Execute binary on _linux/arm64_
 4. It raises the following error:
 
     ```bash
